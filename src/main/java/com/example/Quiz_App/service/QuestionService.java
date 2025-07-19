@@ -1,12 +1,19 @@
 package com.example.Quiz_App.service;
 
+import com.example.Quiz_App.Question;
+import com.example.Quiz_App.dao.QuestionDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class QuestionService {
 
+    @Autowired
+    QuestionDao questionDao;
 
-    public static String getAllQuestions() {
-
+    public List<Question> getAllQuestions() {
+        return questionDao.findAll();
     }
 }
