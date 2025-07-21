@@ -4,6 +4,7 @@ package com.example.Quiz_App.controller;
 import com.example.Quiz_App.Question;
 import com.example.Quiz_App.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class QuestionController {
     QuestionService questionService;
 
     @GetMapping("allquestions")
-    public List<Question> getAllQuestions() {
+    public ResponseEntity<List<Question>> getAllQuestions() {
         return questionService.getAllQuestions();
     }
 
@@ -35,8 +36,8 @@ public class QuestionController {
         return questionService.deleteQuestion(id);
     }
 
-    @PutMapping("update/{id}")
-    public String updateQuestion (@PathVariable Integer id, @RequestBody Question question) {
-        return questionService.updateQuestion(id, question);
+//    @PutMapping("update/{id}")
+//    public String updateQuestion (@PathVariable Integer id, @RequestBody Question question) {
+//        return questionService.updateQuestion(id, question);
     }
 }
