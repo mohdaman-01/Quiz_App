@@ -60,9 +60,9 @@ public class QuizService {
             if (response.getResponse().equals(questions.get(i).getRight_answer()))
                 right++;
 
-            i++
+            i++;
 
         }
-        return new ResponseEntity<>(right, HttpStatus.OK)
+        return new ResponseEntity<>(right, HttpStatus.OK);
     }
 }
