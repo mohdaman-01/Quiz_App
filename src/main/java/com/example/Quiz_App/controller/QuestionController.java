@@ -1,7 +1,7 @@
 package com.example.Quiz_App.controller;
 
 
-import com.example.Quiz_App.Question;
+import com.example.Quiz_App.Model.Question;
 import com.example.Quiz_App.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
